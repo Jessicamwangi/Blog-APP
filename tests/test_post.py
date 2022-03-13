@@ -1,5 +1,5 @@
 import unittest
-from app.models import Post, User, Comment
+from App.models import Post, User, Comment
 
 class TestPost(unittest.TestCase):
     
