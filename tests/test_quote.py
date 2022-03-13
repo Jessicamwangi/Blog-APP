@@ -1,5 +1,5 @@
 import unittest
-from app.models import Quote
+from App.models import Quote
 
 class TestQuote(unittest.TestCase):
     def setUp(self):
