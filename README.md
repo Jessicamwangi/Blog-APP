@@ -3,10 +3,10 @@
 
 Live Site link
 
-###Author
+##Author
 Jessica Mwangi.
 
-##User view.
+###User view.
 - User can view the blog posts on the site
 - User sees random quotes on the site
 - User can view the most recent posts
@@ -19,7 +19,7 @@ Jessica Mwangi.
  -update or delete blogs I have created.
 
 
-##Description
+###Description
  - This is a personal blogging website where you can create and share your opinions and other users can read and comment on them. with a feature that displays random quotes to inspire your users.
 
 - Behavior Driven Development
@@ -31,7 +31,7 @@ Writer login	Take you to home page	Redirect you to the Homepage
 - Writer delete a blog post	Deleting the blog post from the database	The blog post will be deleted and not appear on the page
 - Writer update a blog post	Updating the blog post in database	The blog post will be updated
 - Writer delete a comment	Deleting the blog post in database	The comment will no longer appear under the post
-##Technologies Used
+###Technologies Used
 - Python 3.7.4
 - Flask 1.1.1
 - PostgreSQL 11.5
@@ -43,12 +43,12 @@ Writer login	Take you to home page	Redirect you to the Homepage
 - Font Awesome 5.8.2
 - jQuery 3.4.1
 - Google Font API
-##Requirements
+###Requirements
 - This program requires python3.+ (and pip) installed, a guide on how to install python on various platforms can be found here
 - Once python is installed, install the folowing external libraries provided in the requirements.txt file using pip
 Example:
 pip install flask
-##Installation and Set-up
+###Installation and Set-up
 - To view the app, open the live site link provided below on the README. Here is a run through of how to set up the application:
 
 - Step 1 : Clone this repository using git clone https://github.com/collinsmuriuki/blog.git, or downloading a ZIP file of the code.
@@ -65,12 +65,12 @@ source venv/bin/activate
 - Step 6 : On your terminal, run the following command, chmod a+x start.sh
 -You can now launch the application locally by running the command ./start.sh
 -Open your preferred browser and view the app by opening the link http://127.0.0.1:5000/.
-##Known Bugs
+###Known Bugs
 - On creating a new post, a subscribed user wil receive a notification email. However, the page will display an error when redirecting the writer to the post page. This feature has been temporarily disabled due to this -- FIXED
 ##Support and contact details
 - You can provide feedback or raise any issues/ bugs through the following means:
 
--official1offmark@gmail.com
-##License
+- jessicamwangi933@gmail.com
+###License
 Copyright (c) [2022] [Jessica Mwangi.]
 [MIT License](https://choosealicense.com/licenses/mit/)
