@@ -1,4 +1,5 @@
-.content {
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
+/* .content {
   flex: 1 0 auto;
 }
 
@@ -17,6 +18,10 @@ footer {
 
 
 /* Profile container */
+.masthead {
+  filter: brightness(50%);
+}
+
 .profile {
   margin: 20px 0;
 }

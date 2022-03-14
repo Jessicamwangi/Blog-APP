@@ -7,10 +7,12 @@
 <link rel="stylesheet" href="/Blog/App/static/css/clean-blog.css" type="text/css">
 <link rel="stylesheet" href="/Blog/App/static/css/clean-blog.min.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
 
 <div class="container content">
-    <div class="row profile">
+    <div class="row profile" style="margin-top: 70px; font-size: 30px;">
         <div class="col-md-3">
             <div class="profile-sidebar position-fixed">
                 <!-- SIDEBAR USERPIC -->
@@ -48,6 +50,7 @@
         </div>
         <div class="col-md-9">
             <div class="profile-content">
+        
                 {%for post in posts[::-1]%}
                 <div class="post-preview">
                     {%if current_user.is_authenticated%}
@@ -56,18 +59,26 @@
                         <a href="{{url_for('main.delete_post', id = user.id, post_id = post.id)}}" class="btn btn-outline-danger btn-sm"><i class="far fa-trash-alt"></i></a>
                     </div>
                     {%endif%}
-                    <a href="{{url_for('main.post', id = post.id)}}">
-                        <h2 class="post-title">
-                            {{post.post_title}}
-                        </h2>
-                        <h3 class="post-subtitle">
-                            {{post.post_content | truncate(45) | safe}}
-                        </h3>
-                    </a>
-                    <div class="post-meta">Posted by
-                        <a href="/profile/{{post.user_id}}">{{post.post_by}}</a>
-                        on {{post.posted_at.strftime('%B %d, %Y')}}
-                    </div>
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                    <div class="card border-info mb-3" style="max-width: 18rem;">
+                        <div class="card-body">
+                          <h5 class="card-title"></h5>
+                          <p class="card-text"></p>
+                          <a href="{{url_for('main.post', id = post.id)}}">
+                            <h2 class="post-title">
+                              {{post.post_title}}
+                            </h2>
+                            <h3 class="post-subtitle">
+                              {{post.post_content | truncate (45) | safe}}
+                            </h3>
+                          </a>
+                          <p class="post-meta">Posted by
+                            <a href="{{url_for('main.profile', id = post.user_id)}}">{{post.post_by}}</a> on
+                            {{post.posted_at.strftime('%B %d, %Y')}}
+                          </p>
+                        </div>
+                      </div>
+                      </div>
                 </div>
                 {%endfor%}
             </div>

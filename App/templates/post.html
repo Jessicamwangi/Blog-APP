@@ -8,13 +8,17 @@
 <link rel="stylesheet" href="/Blog/App/static/css/clean-blog.min.css" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
 
-<header class="masthead" style="background-image: url('../static/assets/post-sample-image.jpg'); margin-top: 40px;">
+<header class="masthead" style="background-image: url('../static/assets/post-sample-image.jpg'); width: 100%;height: 500px; background-size: cover;background-repeat: no-repeat;">
+
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
-                <div class="post-heading">
+                <div class="post-heading" style="margin-top: 70px; color: black; text-align: center; font-size: 40px;">
                     <h1>{{post.post_title}}</h1>
                     <span class="meta">Posted by
                         <a href="{{url_for('main.profile', id = post.user_id)}}">{{post.post_by}}</a>
