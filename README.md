@@ -1,7 +1,7 @@
 # Blog It
 - My personal blog web application.
 
-Live Site link
+Live Site link https://blog-it0.herokuapp.com/
 
 #### By Jessica Mwangi
 
